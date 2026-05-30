@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import logo from "./assets/branding/valenciano-logo.png";
+import logo from "./assets/Branding/valenciano-logo.png";
 import "./App.css";
 
 const products = [
