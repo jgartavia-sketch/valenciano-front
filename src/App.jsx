@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import logo from "./assets/branding/valenciano-logo.png";
 import "./App.css";
 
 const products = [
@@ -75,8 +76,13 @@ function App() {
 function Navbar({ cartCount }) {
   return (
     <nav className="navbar">
-      <NavLink to="/" className="nav-brand">
-        DISTRIBUIDORA VALENCIANO
+      <NavLink to="/" className="nav-brand" aria-label="Ir al inicio">
+        <img src={logo} alt="Distribuidora Valenciano" className="nav-logo" />
+
+        <span>
+          <strong>Valenciano</strong>
+          <small>Distribuidora de concentrados</small>
+        </span>
       </NavLink>
 
       <div className="nav-links">
@@ -210,11 +216,7 @@ function ContactPage() {
           mascotas.
         </p>
 
-        <a
-          href="https://wa.me/50689119504"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://wa.me/50689119504" target="_blank" rel="noreferrer">
           Escribir por WhatsApp
         </a>
       </div>
